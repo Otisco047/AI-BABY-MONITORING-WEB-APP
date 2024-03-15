@@ -19,14 +19,13 @@ function draw() {
     if (status != "") {
         o_d.detect(video, getResults);
         for (i = 0; i < obj.length; i++) {
-            document.getElementById("n_o_b").innerHTML = "Number:of objects detected" + obj.length;
             obj_name = obj[i].label;
             obj_con = floor(obj[i].confidence * 100);
             obj_x = obj[i].x;
             obj_y = obj[i].y;
             obj_width = obj[i].width;
             obj_height = obj[i].height;
-            if (obj_name == "Person") {
+            if (obj_name == "person") {
                 document.getElementById("status").innerHTML = "status: baby found";
                 alarm.stop();
             } else {
